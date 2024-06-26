@@ -1,18 +1,20 @@
 #include "main.h"
 
 /**
- * main - funtions print text as output
- *
- * Return:return 0
- */
+*main - function prints text as output
+*
+*Return:return 0
+*/
 int main(void)
 {
+	char school[10] = "_putchar";
+
 	int i;
-	printf("Nested for loop with @\n");
-       for (i = 0;i < 10; i++)
-       {
-	       _putchar(school[i]);
-       }
-       _putchar(10);
-       return (0);
+
+	for (i = 0; i < 8; i++)
+	{
+		_putchar(school[i]);
+	}
+	_putchar(10);
+	return (0);
 }
