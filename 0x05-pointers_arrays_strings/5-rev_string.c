@@ -3,7 +3,7 @@
 /**
  * rev_string - print if function reverses string
  * @s: The string to be reversed
- *
+ * Return: Anything
  */
 void rev_string(char *s)
 {
@@ -17,7 +17,7 @@ void rev_string(char *s)
 		j++;
 	}
 
-	k = k - 1;
+	k = j - 1;
 
 	for (i = 0; i < j / 2; i++)
 
