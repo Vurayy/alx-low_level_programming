@@ -1,4 +1,5 @@
 #include "main.h"
+#include "stdio.h"
 
 /**
  * rev_string - print if function reverses string
@@ -7,8 +8,8 @@
  */
 void rev_string(char *s)
 {
+	char tmp;
 	int i, j, k;
-	char tmp
 
 	j = 0;
 	k = 0;
