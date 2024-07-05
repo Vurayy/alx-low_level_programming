@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * _strncat  - the main function
+  * _strncat  - prints if function concatenates two strings
   *
   * @n: Function parameter
   *
@@ -13,22 +13,22 @@
   */
 char *_strncat(char *dest, char *src, int n)
 {
-	int k, r;
+	int i, j;
 
-	k = 0;
-	r = 0;
+	i = 0;
+	j = 0;
 
-	while (dest[k] != '\0')
+	while (dest[i] != '\0')
 	{
-	k++;
+		i++;
 	}
-	while (r < n && src[r] != '\0')
+	while (j < n && src[j] != '\0')
 	{
-	dest[k] = src[r];
-	k++;
-	r++;
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	dest[k] = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
 
