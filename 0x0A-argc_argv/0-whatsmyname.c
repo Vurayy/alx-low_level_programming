@@ -4,7 +4,7 @@
  * main - prints its name, followed by a new line
  *
  * @argc: number of command line argument.
- * @argv: array that contains the command kine arg.
+ * @argv: array that contains the command line arg.
  *
  * Return: (0) when sucessful
  */
