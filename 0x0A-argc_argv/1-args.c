@@ -8,11 +8,17 @@
  */
 int main(int argc, char **argv)
 {
-	int a;
+	int i;
 
-	for (a = 0; a < argc; a++)
+	if (argc == 1)
+		printf("%d\n", argc - 1);
+	else
 	{
-		printf("%s\n", argv[a]);
+		for (i = 0; *argv; i++, argv++)
+			;
+
+		printf("%d\n", i - 1);
 	}
+
 	return (0);
 }
