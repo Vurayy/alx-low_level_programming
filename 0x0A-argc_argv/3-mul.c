@@ -1,18 +1,19 @@
 #include "stdio.h"
+#include "stdlib.h"
 
 /**
- * main - print aall arguments it receive
+ * main - print all arguments it receive
  * @argc: number of command line argument
  * @argv : array that contains the program command line arg.
  * Return: (0) when successful
  */
 int main(int argc, char *argv[])
 {
-	int i;
-
-	for (i = 0; i < argc; i++)
+	if (argc != 3)
 	{
-		printf(*@s\n', argv[v]);
+		printf("Error\n");
+		return (1);
 	}
+	printf("%d\n", atoi(argv[1]) * atoi(argv[2]));
 	return (0);
 }
