@@ -1,8 +1,7 @@
-#include "stdio.h"
 #include "stdlib.h"
 
 /**
- * main - print all arguments it receive
+ * main -multiplies two numbers
  * @argc: number of command line argument
  * @argv : array that contains the program command line arg.
  * Return: (0) when successful
