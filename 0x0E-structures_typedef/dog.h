@@ -9,6 +9,11 @@
  * Desc: My first ALX struct
  */
 
+/**
+ * dog_t - NAme for struct dog
+ */
+
+typedef struct dog dog_t;
 struct dog
 {
 	char *name;
