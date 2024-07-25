@@ -5,11 +5,10 @@
  *
  * @name: The name to be printed
  * @f: The pointer to a funtion
- * Return: void
  */
 void print_name(char *name, void (*f)(char *))
 {
 	if (name == NULL && f == NULL)
-		return;
-	f(name);
+		f(name);
+
 }
