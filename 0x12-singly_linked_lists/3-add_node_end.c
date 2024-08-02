@@ -1,50 +1,78 @@
 #include "lists.h"
 
 /**
- * add_node_end - function that adds a new node at the end of a list_t list
- * @head: Const double pointer of structure list_t for beginning
- * @str: Const char pointer for data to be added
- * Return: List with new node for list_t list, NULL if failed
+ * add_node_end - function with two arguments
+ * @head: pointer to struct of linked list
+ * @str: char type pointer to string
+ *
+ * Description: adds a new node at the end of linked list
+ * Return: address of new element
  */
-
 list_t *add_node_end(list_t **head, const char *str)
 {
+	int count = 0;
+	list_t *end_node, *cursor;
 
-	unsigned int i;
-	list_t *new;
-	list_t *temp;
+	end_node = malloc(sizeof(list_t));
+	if (end_node == NULL)
+		return (NULL);
 
-	new  = malloc(sizeof(list_t));
+	if (str)
+	{
+		end_node->str = strdup(str);
+		while (str[count] != '\0')
+			count++;
+		end_node->len = count;
+	}
+	else
+	{
+		end_node->str = NULL;
+		end_node->len = 0;
+	}
+	end_node->next = NULL;
+	if (*head)
+	{
+	cursor = *head;
+	while (cursor->next != NULL)
+		cursor = cursor->next;
+	cursor->next = end_node;
+	}
+	else
+		*head = end_node;
+	return (end_node);
+}
+
+/**
+ * *_strdup - function with one argument
+ * @str: string argument
+ *
+ * Description: returns a pointer to allocated space in memory
+ * Return: pointer
+ */
+char *_strdup(const char *str)
+{
+	int i, j;
+	char *ptr;
 
 	if (str == NULL)
 		return (NULL);
-
-	if (new == NULL)
-		return (NULL);
-
-	for (i = 0; str[i]; i++)
-		;
-
-	if (*head == NULL)
+	i = 0;
+	while (*(str + i) != '\0')
 	{
-		*head = new;
-		new->len = i;
-		new->str = strdup(str);
-		new->next = NULL;
-		return (new);
+		i++;
 	}
 
-	temp = *head;
+	ptr = malloc(sizeof(char) * i + 1);
 
-	while (temp->next != NULL)
-		temp = temp->next;
+	if (ptr == NULL)
+		return (NULL);
 
-	temp->next = new;
-
-	new->len = i;
-	new->str = strdup(str);
-	new->next = NULL;
-
-	return (new);
-
+	j = 0;
+	while (str[j] != '\0')
+	{
+		ptr[j] = str[j];
+		j++;
+	}
+	ptr[j] = '\0';
+	return (ptr);
 }
