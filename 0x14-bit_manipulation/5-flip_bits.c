@@ -4,7 +4,7 @@
  * flip_bits - gets the number of bits flipped form n to m
  * @n: long integer
  * @m: secondary long integer
- * Returns: number of bits need to flip to get from `n to `m
+ * Return: number of bits need to flip to get from `n to `m
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
